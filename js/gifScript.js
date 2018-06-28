@@ -52,6 +52,12 @@ function createGif(src, link, id) {
 
 function handleGifs(gifData) {
   for (let i = 0; i < gifData.length; i++) {
+    if (gifData[i].images.fixed_width.webp.length < 1 ||
+        gifData[i].images.fixed_width_downsampled.webp.length < 1 ||
+        gifData[i].images.fixed_width_downsampled.url.length < 1) {
+      continue;
+    }
+
     let src;
     if (webpEnabled) {
       if (!isMobile()) {
