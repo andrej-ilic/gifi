@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/masonry.js"></script>
+  <script src="js/gifScript.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div id="navbar">
+      <div class="nav-item">
+        <a href="index.html" id="logo"><span>G</span><span>i</span><span>f</span><span>i</span></a>
+      </div>
+      <div class="nav-item" style="float: right;">
+        <form action="javascript:void(0)" id="search-form">
+          <input type="text" onclick="this.setSelectionRange(0, this.value.length)" name="search" placeholder="Search" id="search-input" spellcheck="false">
+          <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1">
+        </form>
+      </div>
+      <div class="nav-item" style="float: right;">
+        <a href="#" id="nav-star"><i class="material-icons orange md-50">star</i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div id="masonry"></div>
+  </div>
+  
+  <div>
+    <button onclick="goToTop()" id="topBtn">
+      <i class="material-icons md dark-blue">keyboard_arrow_up</i>
+    </button>
+  </div>
+
+</body>
+
+</html>
