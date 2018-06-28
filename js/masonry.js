@@ -95,6 +95,4 @@ window.onload = function() {
   });
 
   $('#nav-star').click(displayFavorites);
-
-  $('#logo').text(isMobile());
 };
