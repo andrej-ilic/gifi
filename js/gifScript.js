@@ -15,6 +15,9 @@ function createGif(src, link, id) {
   let img = document.createElement('img');
   img.src = src;
   img.onload = handleResize;
+  img.onerror = function() {
+    this.parentNode.parentNode.parentNode.innerHTML = '';
+  }
   let a = document.createElement('a');
   a.href = link;
   a.target = '_blank';
