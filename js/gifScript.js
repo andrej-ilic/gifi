@@ -15,6 +15,9 @@ function createGif(src, link, id) {
   let img = document.createElement('img');
   img.src = src;
   img.onload = handleResize;
+  let a = document.createElement('a');
+  a.href = link;
+  a.target = '_blank';
 
   let favorite = document.createElement('a');
   favorite.innerHTML = '<i class="material-icons orange">' + (isInFavorites(id) ? 'star' : 'star_border') + '</i>';
@@ -28,8 +31,8 @@ function createGif(src, link, id) {
     let star = gif.getElementsByClassName('favorite-img')[0];
     star.classList.remove('show-star');
   }
-
-  gif.appendChild(img);
+  a.appendChild(img);
+  gif.appendChild(a);
   gif.appendChild(favorite);
   item.appendChild(gif);
   document.getElementById('masonry').appendChild(item);

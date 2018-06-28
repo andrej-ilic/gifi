@@ -27,7 +27,7 @@ body {
   position: absolute;
 }
 
-.gif > img {
+.gif img {
   display: block;
   width: 100%;
   border-radius: 10px;
